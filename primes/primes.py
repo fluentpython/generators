@@ -32,6 +32,7 @@ def primes():
 
 
 if __name__ == '__main__':
+
     import sys
     try:
         num_primes = int(sys.argv[-1])
