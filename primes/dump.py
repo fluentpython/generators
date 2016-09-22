@@ -5,7 +5,7 @@ from array import array
 
 TYPECODE = 'L'  # unsigned 32-bit long
 
-primes = array('L')
+primes = array(TYPECODE)
 
 with zipfile.ZipFile('primes1.zip') as inzip:
     with inzip.open('primes1.txt') as infile:
@@ -17,3 +17,5 @@ with zipfile.ZipFile('primes1.zip') as inzip:
 
 with lzma.open('primes1.xz', 'wb') as outfile:
     primes.tofile(outfile)
+
+print('{:,} primes written'.format(len(primes)))
