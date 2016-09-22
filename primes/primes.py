@@ -13,16 +13,16 @@ def primes():
     candidate = 3
 
     while True:
-        composite = False
+        is_prime = True
 
         for n in seen:
             if candidate % n == 0:
-                composite = True
+                is_prime = False
                 break
             if n * n > candidate:
                 break
 
-        if not composite:
+        if is_prime:
             yield candidate
             seen.append(candidate)  # OverflowError if candidate >= 2**64
 
