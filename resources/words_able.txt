@@ -1,0 +1,10 @@
+avoidable
+belieavable
+expandable
+fixable
+movable
+measurable
+readable
+playable
+washable
+iterable
